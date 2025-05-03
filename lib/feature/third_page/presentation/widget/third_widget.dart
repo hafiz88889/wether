@@ -34,7 +34,7 @@ class ThirdWidget extends StatelessWidget {
           const SizedBox(height: 8,),
           Text(time,style: TextStyle(color: Colors.white,fontSize: 26,fontWeight: FontWeight.w700),),
           const SizedBox(height: 8,),
-          Text(text1,style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400),),
+          Text(text3,style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400),),
         ],
       ),
     );

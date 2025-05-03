@@ -19,7 +19,7 @@ class ThirdPage extends StatelessWidget {
     ];
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.all(25),
+        padding: EdgeInsets.symmetric(horizontal: 25),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
@@ -140,11 +140,13 @@ class ThirdPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                ThirdWidget(text1: "SUNRISE", time: "5:28 AM", text3: "Sunset: 7:P25PM"),
+                ThirdWidget(text1: "SUNRISE", time: "5:28 AM", text3: "Sunset: 7:25PM"),
                 const SizedBox(width: 15,),
-                ThirdWidget(text1: "SUNRISE", time: "5:28 AM", text3: "Sunset: 7:P25PM"),
+                ThirdWidget(text1: "UV Index", time: "4", text3: "Modarate"),
               ],
-            )
+            ),
+            const SizedBox(height: 15,),
+            Center(child: IconButton(onPressed: (){}, icon: Icon(Icons.menu,size: 35,),color: Colors.white,))
           ],
         ),
       ),
