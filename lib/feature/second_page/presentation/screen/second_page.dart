@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wether_app/core/utils/Image.dart';
 
 import '../../../../core/component/wether_service.dart';
+import '../../../../core/utils/routes.dart';
 
 class SecondPage extends StatefulWidget {
 
@@ -116,11 +117,23 @@ class _SecondPageState extends State<SecondPage> {
                                       Text(item[index]["text2"],style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w200),)
                                     ],
                                   );
-                                },),
+                                },
+                              ),
                             )
                           ],
                         ),
                       ),
+                  const SizedBox(height: 10,),
+              Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          IconButton(onPressed: (){}, icon: Icon(Icons.location_on_outlined,size: 35,color: Colors.white,)),
+                          IconButton(onPressed: (){}, icon: Icon(Icons.add_circle_outline_outlined,size: 35,color: Colors.white,)),
+                          IconButton(onPressed: (){
+                            Navigator.pushNamed(context, RouteHelper.thirdPage);
+                          }, icon: Icon(Icons.menu,size: 35,color: Colors.white,)),
+                        ],
+                  ),
                 ],
               ),
             )
@@ -213,7 +226,8 @@ class _SecondPageState extends State<SecondPage> {
             //   //         IconButton(onPressed: (){
             //   //           Navigator.pushNamed(context, RouteHelper.thirdPage);
             //   //         }, icon: Icon(Icons.menu,size: 35,color: Colors.white,)),
-            //   //       ],)
+            //   //       ],
+            //   ),
             //   //   ],
             //   // ),
             // ),
